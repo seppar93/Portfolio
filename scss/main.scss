@@ -1,7 +1,12 @@
 // $fa-font-path: "~font-awesome/fonts";
 // @import "~font-awesome/scss/font-awesome";
+
+// font
 @import url("https://fonts.googleapis.com/css?family=Raleway:200,100,400");
+
 @import "config";
+@import "menu";
+
 $primary-color: #444;
 $secondary-color: #eece1a;
 $show-home-image: true;
@@ -42,23 +47,6 @@ h2 {
   font-size: 2rem;
   color: #aaa;
 }
-
-// h1,
-// h2,
-// h3 {
-//   margin: 0;
-//   font-weight: 400;
-
-//   // h1.lg-heading ==
-//   &.lg-heading {
-//     font-size: 6rem; // 1rem = 16px  multiplier of html tag
-//   }
-//   &.sm-heading {
-//     margin-bottom: 2rem;
-//     padding: 0.2rem 1rem;
-//     background: rgba(lighten($primary-color, 2), 0.5);
-//   }
-// }
 
 a {
   color: #ffffff;
