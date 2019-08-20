@@ -12,9 +12,10 @@
     height: 3px;
     margin: 0 0 5px 0;
     // background: set-text-color($primary-color);
+    background: #ffffff;
     @include easeOut;
   }
-  // Rotate into x with menu lines
+
   &.close {
     transform: rotate(180deg);
 
@@ -26,6 +27,7 @@
         opacity: 0;
       }
       &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
       }
     }
   }
