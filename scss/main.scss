@@ -6,7 +6,6 @@
 
 @import "config";
 @import "menu";
-@import "mobile";
 
 $primary-color: #444;
 $secondary-color: #eece1a;
@@ -66,9 +65,8 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%;
-
-  // only affects the icon of the main class
+  // height: 100%;
+  min-height: calc(100vh -6px); // only affects the icon of the main class
   .icons {
     margin-top: 1rem;
 
@@ -136,3 +134,4 @@ main {
   color: set-text-color($primary-color);
   height: 60px;
 }
+@import "mobile";
