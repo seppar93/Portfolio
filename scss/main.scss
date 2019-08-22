@@ -6,6 +6,7 @@
 
 @import "config";
 @import "menu";
+@import "mobile";
 
 $primary-color: #444;
 $secondary-color: #eece1a;
@@ -25,7 +26,7 @@ $background-opacity: 0.2s;
 body {
   @include background;
   background: $primary-color;
-  color: #ffffff;
+  color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -88,4 +89,50 @@ main {
       margin-top: 20vh;
     }
   }
+}
+// grid template variant
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    "bioimage bio bio"
+    "job1 job2 job3";
+  // grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 30%;
+  }
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+
+  .job1 {
+    grid-area: job1;
+  }
+  .job2 {
+    grid-area: job2;
+  }
+  .job3 {
+    grid-area: job3;
+  }
+  .job {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+  }
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: set-text-color($primary-color);
+  height: 60px;
 }
